@@ -7,28 +7,26 @@
 int  User_Input(int Size){
 
         int  UserInput = 0  , ExitValue = -1; 
-        char *Buffer , *endptr  = NULL;
-	
-	if( (Buffer = malloc(sizeof (char)*Size)) == NULL)
-//                exit(EXIT_FAILURE);
-//               
-
+        char Buffer[10] = "\0" , *endptr  = NULL;
 	
         do{
-		if( (Size) == 5)
-			scanf("%10s",Buffer); /*Legge solamente i primi cinque caratteri inseriti dall'utente impendendo 
+				
+		if( Size == 4)
+			scanf("%5s",Buffer); /*Legge solamente i primi cinque caratteri inseriti dall'utente impendendo 
 					       overflow del Buffer (il primo carattere è riservato per il segno)*/
 		else
-			scanf("%8s",Buffer);
+			scanf("%9s",Buffer);
+
 		for(int i=0;i<10;i++)
-		printf("Buffer %c \n", Buffer[i]);
+		printf("Buffer[%d] %c : %d \n",i, Buffer[i],Buffer[i]);
+
                 if(getchar() == '\n'){
 
                         errno = 0;
 
                		UserInput = (int) strtol (Buffer,&endptr, 10);
 
-			if(UserInput > 9999 && Size == 4){
+			if(UserInput > 9999 && Size == 4 || UserInput > 99999999 && Size == 8){
 				printf("Errore, valore inserito superiore alla dimensione massima consentitai di: %d cifre. Riprovare!!\n",Size);
 				ExitValue = -1;
 			}else
@@ -63,8 +61,6 @@ int  User_Input(int Size){
 
 
         }while(ExitValue == -1);
-
-	free(Buffer);
 
         return UserInput;
 }

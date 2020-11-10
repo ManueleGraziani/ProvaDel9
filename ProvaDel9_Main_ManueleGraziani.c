@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "ProvaDel9.h"
 
-#define FactorSize 5 
+#define FactorSize 4
 #define MProductSize 8
 
 int main(){
