@@ -14,7 +14,7 @@ int Numeric_Root(int Value){
 
 		RM = Numeric_Root_Cycle(Value);/*viene calcolata la radice numerica
 						 del valore inserito dall'utente  */
-		if(RM < -9 || RM > 9){
+		while(RM < -9 || RM > 9){
 			printf("Ricalcolo radice numerica.....");
 			RM = Numeric_Root_Cycle(RM);	
 		}
