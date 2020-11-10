@@ -30,7 +30,7 @@ int  User_Input(int Size){
 		InputSize = 1 + log10(fabs(UserInput));
 
 		if(InputSize > Size){
-			printf("Errore, valore inserito superiore alla dimensione massima consentitai di: %d cifre. Riprovare!!\n",Size);
+			printf("Errore, valore inserito superiore alla dimensione massima consentita di: %d cifre. Riprovare!!\n",Size);
 			ExitValue = -1;
 		}
 

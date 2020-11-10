@@ -7,9 +7,9 @@
 int main(){
 
 	// Dichiarazione Variabili 
-	int FirstFactor	 = 0,  RMFFactor	= 0;
-	int SecondFactor = 0,  RMSFactor	= 0;
-	int MProduct	 = 0,  RMMProduct	= 0;
+	int FirstFactor	 = 0,  NRFFactor	= 0;
+	int SecondFactor = 0,  NRSFactor	= 0;
+	int MProduct	 = 0,  NRMProduct	= 0;
 	
 	printf("PROVA DEL NOVE \n");
 	printf("Developed by Manuele Graziani\n\n");
@@ -30,13 +30,13 @@ int main(){
 	
 	
 	// Calcolo della Radice Numerica dei valori forniti in input
-	RMFFactor  = Numeric_Root(FirstFactor);
-	RMSFactor  = Numeric_Root(SecondFactor);
-	RMMProduct = Numeric_Root(MProduct);
-	printf("\nRadice Numerica Fattore 1° =  %d ; Fattore 2° =  %d ; Prodotto = %d \n", RMFFactor, RMSFactor, RMMProduct);
+	NRFFactor  = Numeric_Root(FirstFactor);
+	NRSFactor  = Numeric_Root(SecondFactor);
+	NRMProduct = Numeric_Root(MProduct);
+	printf("\nRadice Numerica Fattore 1° =  %d ; Fattore 2° =  %d ; Prodotto = %d \n", NRFFactor, NRSFactor, NRMProduct);
 	printf("----------------------------------------------------- \n");
 
 
-	return Value_Comparison(RMFFactor,RMSFactor,RMMProduct);
+	return Value_Comparison(NRFFactor,NRSFactor,NRMProduct);
 
 }
